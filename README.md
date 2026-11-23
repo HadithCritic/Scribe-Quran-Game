@@ -1,36 +1,45 @@
+![Scribe animated ASCII cover](Assets/readme/scribe-ascii-cover.gif)
+
 # Scribe — Quran copying practice
 
-Scribe is a quiet, verse-by-verse writing practice game. It invites you to copy the Authorized English Translation of the Quran one passage at a time, slowly and attentively.
+A quiet, verse-by-verse writing practice game. Copy one verse at a time and let every word pass through your hands.
 
 ## About
 
-The game presents 6,346 typing passages in sequence, including each surah's opening basmala except surah 9. As you copy, Scribe tracks progress through the whole text and by surah. When you finish, you can begin another copy.
+Scribe guides you through the Quran in sequence, one verse at a time. The complete copy is presented as 6,346 typing entries, including each surah's opening basmala except surah 9. Your writing progress is saved automatically in your browser.
 
 ## Features
 
-- A focused writing desk with one passage displayed at a time.
+- A focused writing desk with one verse displayed at a time.
 - Exact-text typing practice; use Backspace to correct mistakes.
 - Automatic progress saving in browser storage.
-- A progress view showing completed copies, passages remaining, and completion by surah.
+- A progress view with the number of entries remaining and completion by surah.
 - A restart option and the ability to begin another full copy.
-- A self-contained HTML game with its styles, behavior, text, fonts, and artwork embedded.
+- A self-contained HTML game with styles, behavior, text, fonts, and artwork embedded.
 
 ## Play
 
 1. Download `Scribe.html` from this repository.
 2. Open it in a modern browser.
-3. Select **Begin writing**, then click the paper and type the displayed passage.
-4. Continue passage by passage. Your progress is saved automatically.
+3. Select **Begin writing**, then click the paper and type the displayed verse.
+4. Continue through the Quran. Progress saves as you go.
 
-No build step, package installation, or server is required. Progress stays in the browser profile and is associated with the address used to open the game. The downloaded file and any hosted copy therefore have separate saves.
+The game needs no server, build step, or package installation. Saves are tied to the browser profile and address used to open the file, so a downloaded copy and hosted copy keep separate progress.
 
 ## Repository contents
 
 - `Scribe.html` — standalone playable game.
-- `Artwork/Scribe_Coffee_Final_Artwork.png` — source artwork; the game also contains an embedded copy.
-- `Assets/Fonts/*OFL.txt` — license notices for the fonts embedded in the game.
+- `Assets/readme/scribe-ascii-cover.gif` — animated README banner.
+- `Assets/readme/scribe-ascii-cover.png` — still version of the banner.
+- `Assets/Fonts/*OFL.txt` — license notices for fonts embedded in the game.
+- `scripts/build_readme_banner.py` — source script for regenerating the banner.
 
-There are no runtime packages or external package dependencies to install. The game is implemented as a single HTML file.
+To rebuild the banner, install Pillow and run:
+
+```bash
+python -m pip install Pillow
+python scripts/build_readme_banner.py
+```
 
 ## Text and credits
 
